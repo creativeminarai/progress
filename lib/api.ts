@@ -1,6 +1,6 @@
 import { MeetingResponse } from './types';
 
-const GOOGLE_SHEETS_API_URL = 'https://script.google.com/macros/s/AKfycbwZTCY-PLxGXm0ZisvtamS8X2bTLLvDrPmeV0MQdgmHoso6W-0jgNWycqAnPyE6G8op/exec';
+const GOOGLE_SHEETS_API_URL = process.env.NEXT_PUBLIC_SHEET_URL || 'https://script.google.com/macros/s/AKfycbwZTCY-PLxGXm0ZisvtamS8X2bTLLvDrPmeV0MQdgmHoso6W-0jgNWycqAnPyE6G8op/exec';
 
 export async function fetchMeetings(): Promise<MeetingResponse> {
   try {
